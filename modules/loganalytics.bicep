@@ -10,7 +10,7 @@ param localizacao string
 @maxValue(730)
 param retencaoEmDias int = 30
 
-resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2025-02-01' = {
+resource meuLogAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2025-02-01' = {
   name: nomeWorkspace
   location: localizacao
   properties: {
@@ -22,7 +22,7 @@ resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2025-02
 }
 
 @description('ID do Log Analytics Workspace')
-output id string = logAnalyticsWorkspace.id
+output id string = meuLogAnalyticsWorkspace.id
 
 @description('Nome do workspace criado')
-output name string = logAnalyticsWorkspace.name
+output name string = meuLogAnalyticsWorkspace.name
