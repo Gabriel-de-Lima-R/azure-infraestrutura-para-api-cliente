@@ -23,8 +23,9 @@ resource meuKeyVault 'Microsoft.KeyVault/vaults@2025-05-01' = {
   }
 }
 
-output id string = meuKeyVault.id
+output id string = meuKeyVault.id 
 
 output name string = meuKeyVault.name
 
-output vaultUri string = meuKeyVault.properties.vaultUri
+// Vai ser usado para a API conseguir se conectar via SDK e ler as variáveis/segredos. 
+output vaultUri string = meuKeyVault.properties.vaultUri// https://<seu-keyvault>.vault.azure.net/

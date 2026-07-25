@@ -19,5 +19,8 @@ resource meuApplicationInsight 'Microsoft.Insights/components@2020-02-02' = {
 }
 
 output id string = meuApplicationInsight.id
-output name string = meuApplicationInsight.name
+
+output nome string = meuApplicationInsight.name
+
+// Vai ser usado para a API conseguir se conectar ao Application Insights e enviar as métricas e logs de execução.
 output connectionString string = meuApplicationInsight.properties.ConnectionString
