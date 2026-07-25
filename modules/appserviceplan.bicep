@@ -1,7 +1,5 @@
 // Arquivo padrão para criação de App Service Plan
 @description('Nome que será usado na construção do App Service Plan')
-@minLength(3)
-@maxLength(24)
 param nomeAppServicePlan string
 
 @description('Localização padrão para criação')
