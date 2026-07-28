@@ -2,9 +2,11 @@
 using '../main.bicep'
 
 param ambiente = 'dev'
-param localizacao = 'eastusa'
+param localizacaoGeral = 'eastusa'
 
 param skuKeyVault = 'standard'
 param skuStorageAccount = 'Standard_LRS'
-param skuAppServiceNome = 'F1'
-param skuAppServiceTier = 'Free'
+param skuAppService = {
+  nome: 'F1'
+  tier: 'Free'
+}

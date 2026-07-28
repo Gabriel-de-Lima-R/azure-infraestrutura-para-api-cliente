@@ -2,9 +2,12 @@
 using '../main.bicep'
 
 param ambiente = 'prod'
-param localizacao = 'brazilsouth'
+param localizacaoGeral = 'brazilsouth'
 
 param skuKeyVault = 'premium'
 param skuStorageAccount = 'Standard_GRS'
-param skuAppServiceNome = 'P1v3'
-param skuAppServiceTier = 'PremiumV3'
+param skuAppService = {
+  nome: 'P1v3'
+  tier: 'PremiumV3'
+}
+
