@@ -8,7 +8,7 @@
 - [Arquitetura](#️-arquitetura)
 - [Estrutura do Projeto](#-estrutura-do-projeto)
 - [Pré-requisitos](#-pré-requisitos)
-- [Como Executar](#como-executar)
+- [Como Executar](#-como-executar)
 
 ## 🎯 Visão Geral
 
