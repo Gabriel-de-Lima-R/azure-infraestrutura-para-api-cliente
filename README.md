@@ -29,18 +29,18 @@ Este projeto implementa uma solução completa de **Infraestrutura como Código 
 graph TB
     subgraph "Azure Resources"
         APP[Web App<br/>Managed Identity]
-        KV[Key Vault<br/>Secrets & Certificates]
+        KV[Key Vault<br/>Segredos & Certificados]
         SA[Storage Account<br/>Blob Storage]
-        AI[Application Insights<br/>Monitoring]
-        LA[Log Analytics<br/>Log Management]
-        ASP[App Service Plan<br/>Compute Resources]
+        AI[Application Insights<br/>Monitoração]
+        LA[Log Analytics<br/>Gerenciamento de Logs]
+        ASP[App Service Plan<br/>Recurso Computacional]
 
         APP -->|RBAC Reader| KV
         APP -->|RBAC Storage Blob Data Contributor| SA
-        APP -->|Telemetry| AI
+        APP -->|Telemetria| AI
         AI --> LA
-        KV -->|Secrets| APP
-        APP --> |Run in| ASP
+        KV -->|Segredo| APP
+        APP --> |Roda em| ASP
     end
 
     subgraph "Security"
@@ -48,8 +48,8 @@ graph TB
         RBAC[Role-Based<br/>Access Control]
     end
 
-    APP -.->|Uses| MSI
-    MSI -.->|Permissions via| RBAC
+    APP -.->|Usa| MSI
+    MSI -.->|Permissão via| RBAC
 
     style APP fill:#f9f,stroke:#333,stroke-width:2px
     style KV fill:#bbf,stroke:#333,stroke-width:2px
